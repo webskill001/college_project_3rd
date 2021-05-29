@@ -1,9 +1,10 @@
 <?php
-include "../admin_area/includes/header.php";
+include "../vendor_area/includes/header.php";
 session_start();
 $_SESSION['VENDOR_LOGIN_ID']=1;
 $vendor_id = $_SESSION['VENDOR_LOGIN_ID'];
 ?>
+<input type="hidden" id="WEBSITE_PATH" value="<?php echo WEBSITE_PATH; ?>">
 <div class="wrapper">
 
 <!-- Preloader -->
@@ -745,5 +746,5 @@ if(isset($_GET['add_product'])){
 </div>
 <!-- ./wrapper -->
 <?php
-include "../admin_area/includes/footer.php";
+include "../vendor_area/includes/footer.php";
 ?>

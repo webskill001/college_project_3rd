@@ -32,30 +32,17 @@
                             Category1
                         </h3>
                         <div class="card-tools">
-                            <select id="category1_arrange" class="custom-select" onchange="category_fetch_by_vendor('<?php echo WEBSITE_PATH ?>')" aria-label="Default select example">
+                            <select id="category1_arrange" class="custom-select"
+                                onchange="category_fetch_by_vendor('<?php echo WEBSITE_PATH ?>')"
+                                aria-label="Default select example">
                                 <option selected value="desc">Desending Order</option>
                                 <option value="asc">Asending Order</option>
                             </select>
                         </div>
                     </div><!-- /.card-header -->
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table no-margin">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">ID</th>
-                                        <th class="text-center">Name</th>
-                                        <th class="text-center">Description</th>
-                                        <th class="text-center">Delete</th>
-                                        <th class="text-center">Edit</th>
-                                        <th class="text-center">Status <br> by <br> vendor</th>
-                                        <th class="text-center">Status <br> by <br> admin</th>
-                                        <th class="text-center">Last Update</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="product_category1"></tbody>
-                            </table>
-                        </div>
+                    <div id="category1_error_message" class="text-danger" style="height:20px;"></div>
+                        <div class="table-responsive" id="product_category1"></div>
                     </div><!-- /.card-body -->
                 </div>
                 <!-- /.card -->
@@ -66,3 +53,7 @@
     </div><!-- /.container-fluid -->
 </section>
 <!-- /.content -->
+<script>
+
+category1('<?php echo WEBSITE_PATH ?>');
+</script>
